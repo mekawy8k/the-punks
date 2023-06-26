@@ -7,10 +7,15 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "astro": "^2.3.0",
     "swiper": "^9.4.1"
+  },
+  "Devependencies": {
+    "gh-pages ": "^5.0.0"
   }
 }
