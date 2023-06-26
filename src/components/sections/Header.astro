@@ -1,0 +1,181 @@
+---
+import discord from '../../assets/icons/discord.svg'
+import twitter from '../../assets/icons/twitter.svg'
+---
+
+<header>
+    <div class="wrapper">
+        <div class="logo"></div>
+        <nav id="nav" class="">
+            <div class="nav-body">
+                <ul>
+                    <li><a href="#About" class="link">About</a></li>
+                    <li><a href="#Collection" class="link">Collection</a></li>
+                    <li><a href="#FAQs" class="link">FAQs</a></li>
+                    <li>
+                        <button class="action-btn link">Connect wallet</button>
+                    </li>
+                    <li>
+                        <div class="link social-group">
+                            <a class="social discord"></a>
+                            <a class="social twitter"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="nav-toggle" class="toggle-btn">
+                <span class="brgr brgr1"></span>
+                <span class="brgr brgr2"></span>
+                <span class="brgr brgr3"></span>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<style>
+    header {
+        position: sticky;
+        top: 0px;
+        background-color: var(--bg);
+        z-index: 100;
+    }
+    header .wrapper {
+        font-family: var(--font);
+        max-width: 1512px;
+        margin: 0 auto;
+        display: flex;
+        height: 63px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 20px;
+    }
+    header .wrapper .logo {
+        background: url(/favicon.svg);
+        width: 39px;
+        height: 39px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    header .wrapper nav .nav-body {
+        position: absolute;
+        top: 63px;
+        display: block;
+        transition: all 0.3s ease-in-out;
+        left: -100vw;
+        height: calc(100vh - 63px);
+    }
+    header .wrapper nav.active .nav-body {
+        display: block;
+        position: absolute;
+        top: 63px;
+        width: 100vw;
+        left: 0px;
+        background: var(--bg);
+        padding: 30px 0;
+    }
+    header .wrapper nav .nav-body ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .wrapper nav .nav-body ul li .social-group {
+        display: flex;
+        gap: 5px;
+    }
+    header .wrapper nav .nav-body ul li .link {
+        color: var(--white);
+        text-decoration: none;
+        cursor: pointer;
+        padding: 5px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        margin: 10px auto;
+    }
+    header .wrapper nav .nav-body ul li .social-group .social {
+        width: 24px;
+        height: 24px;
+    }
+    .twitter {
+        background: url(../../assets/icons/twitter.svg);
+    }
+    .discord {
+        background: url(../../assets/icons/discord.svg);
+    }
+    header .wrapper nav .nav-body ul li .action-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 8px 28px;
+        border-radius: 100px;
+        background: var(--main);
+        color: var(--white);
+        border: 0px;
+    }
+    header .wrapper nav .toggle-btn {
+        display: flex;
+        width: 48px;
+        height: 48px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+    }
+    header .wrapper nav .toggle-btn .brgr {
+        background: var(--white);
+        width: 24px;
+        height: 2px;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+    header .wrapper nav.active .toggle-btn .brgr {
+        position: absolute;
+    }
+    header .wrapper nav.active .toggle-btn .brgr2 {
+        display: none;
+    }
+    header .wrapper nav.active .toggle-btn .brgr1 {
+        rotate: 45deg;
+    }
+    header .wrapper nav.active .toggle-btn .brgr3 {
+        rotate: -45deg;
+    }
+
+    @media (min-width: 696px) {
+        header .wrapper {
+            height: 84px;
+            margin: 0px auto;
+        }
+        header .wrapper nav .nav-body {
+            position: static;
+            display: flex;
+            top: 0px;
+            left: 0px;
+        }
+        header .wrapper nav .nav-body ul {
+            flex-direction: row;
+            gap: 20px;
+        }
+        header .wrapper nav .nav-body ul li .action-btn {
+            height: 31px;
+            padding: 10px 10px;
+        }
+        header .wrapper nav .toggle-btn {
+            display: none;
+        }
+        header .wrapper nav .nav-body ul li .social-group {
+            gap: 10px;
+        }
+    }
+</style>
+
+<script>
+    const nav: HTMLElement = document.getElementById("nav");
+    const toggle: HTMLElement = document.getElementById("nav-toggle");
+    function toggleNav(e: any): void {
+        e.preventDefault();
+        nav.classList.toggle("active");
+    }
+    toggle.onclick = toggleNav;
+</script>

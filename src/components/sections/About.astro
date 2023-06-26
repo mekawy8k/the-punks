@@ -1,0 +1,131 @@
+---
+import punk from "../../assets/punks/non-buy-able-punk.png";
+---
+
+<section id="About">
+    <div class="wrapper">
+        <h2>Meet the Punks</h2>
+        <p>
+            The CryptoPunks are 24x24 pixel art images, generated
+            algorithmically. Most are punky-looking guys and girls, but there
+            are a few rarer types mixed in: Apes, Zombies and even the odd
+            Alien. Every punk has their own profile page that shows their
+            attributes as well as their ownership/for-sale status.
+        </p>
+        <div class="btn-group">
+            <button class="buy-btn">Buy a Punk</button>
+            <button>View full collection</button>
+        </div>
+        <div class="two-side-grid">
+            <div class="list">
+                <div class="about-card non-buy-able">
+                    Punks with a blue background are not for sale and have no
+                    current bids.
+                </div>
+                <div class="about-card">
+                    Punks with a red background are available for sale by their
+                    owner.
+                </div>
+                <div class="about-card">
+                    Punks with a purple background have an active bid on them
+                </div>
+            </div>
+            <div class="img-wrapper">
+                <img src={punk} alt="" class="non-buy-able-punk" />
+                <p>You cannot buy this Punk.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    section {
+        padding: 63px 0px;
+        background: var(--bg);
+        font-family: var(--font);
+        border-radius: 0 0 45px 45px;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    h2 {
+        color: white;
+        font-size: 33px;
+        font-weight: 500;
+        line-height: 42px;
+        letter-spacing: -1px;
+    }
+    p {
+        color: var(--white, #fff);
+        font-size: 16px;
+        line-height: 23px;
+    }
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 0px 0px 0px;
+        align-items: flex-start;
+    }
+    button {
+        font-size: 17px;
+        font-weight: 500;
+        padding: 16px 30px;
+        border-radius: 100px;
+        border: 1px solid var(--gray);
+        background-color: var(--bg);
+        color: var(--white);
+        cursor: pointer;
+    }
+    button.buy-btn {
+        background-color: white;
+        color: var(--bg);
+    }
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px 0px;
+        margin: 10px auto;
+    }
+    .about-card {
+        color: var(--white, #fff);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 33px;
+        display: flex;
+        width: 351px;
+        padding: 20px 45px 21px 21px;
+        width: 100%;
+        align-items: flex-start;
+        border: 1px solid var(--gray);
+        border-radius: 23px;
+    }
+    .non-buy-able {
+        background: var(--main);
+    }
+    .img-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    img {
+        width: 100%;
+    }
+    .img-wrapper p {
+        font-style: italic;
+        font-size: 28px;
+        line-height: 30px;
+        color: var(--white);
+    }
+    @media (min-width: 696px) {
+        img {
+            width: 80%;
+        }
+        .btn-group{
+            flex-direction: row;
+        }
+    }
+</style>

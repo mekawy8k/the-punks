@@ -1,0 +1,48 @@
+---
+import FeatureCard from "../ui/FeatureCard.astro";
+---
+
+<section>
+    <div class="wrapper">
+        <h1>Featured in</h1>
+        <div class="list">
+            <FeatureCard link="#">
+                This ethereum-based project could change how we think about
+                digital art
+            </FeatureCard>
+            <FeatureCard link="#">
+                ‘Obviously, we had no idea it was going to get here,’ say the
+                guys who made the first NFT
+            </FeatureCard>
+            <FeatureCard link="#">
+                CryptoKitties, CryptoPunks and the birth of a cottage industry
+            </FeatureCard>
+        </div>
+    </div>
+</section>
+<style>
+    section {
+        background-color: var(--bg);
+        font-family: var(--font);
+        color: var(--white);
+        padding: 63px 0px;
+    }
+    h1 {
+        text-align: center;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 39px;
+        margin-bottom: 20px;
+    }
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    @media (min-width: 696px) {
+        .list {
+            flex-direction: row;
+            gap: 15px;
+        }
+    }
+</style>

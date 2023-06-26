@@ -1,0 +1,76 @@
+---
+import InfintyScroll from "../ui/InfintyScroll.astro";
+---
+
+<section id="hero">
+    <div class="wrapper center flex hero">
+        <h1>
+            The project that inspired the modern <bold>CryptoArt movement</bold>
+        </h1>
+        <p>
+            10,000 unique collectible characters with proof of ownership stored
+            on the Ethereum blockchain.
+        </p>
+        <a>Mint now</a>
+    </div>
+    <InfintyScroll/>
+</section>
+<style>
+    section {
+        background: var(--bg);
+        height: calc(100vh - 84px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .hero {
+        gap: 10px;
+    }
+    .hero h1 {
+        color: white;
+        text-align: center;
+        font-size: 32px;
+        font-family: "MacPaw";
+        font-weight: 400;
+        margin-top: 15px;
+        line-height: 47px;
+    }
+    .hero p {
+        color: var(--white, #fff);
+        text-align: center;
+        font-size: 15px;
+        font-family: "MacPaw";
+        line-height: 23px;
+        margin-top: 15px;
+
+    }
+    .hero a {
+        font-size: 17px;
+        background-color: white;
+        line-height: 26px;
+        cursor: pointer;
+        text-align: center;
+        line-height: 26px;
+        padding: 12px 33px;
+        border-radius: 100px;
+        margin-top: 15px;
+    }
+    @media (min-width: 696px) {
+        .hero{
+            gap: 15px;
+        }
+        .hero h1 {
+            color: white;
+            text-align: center;
+            font-size: 44px;
+            font-weight: 500;
+            line-height: 78px;
+        }
+        .hero p{
+            font-size: 20px;
+        }
+        .hero a{
+            font-size: 20px;
+        }
+    }
+</style>

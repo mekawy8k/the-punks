@@ -1,0 +1,63 @@
+---
+import punk1 from "../../assets/punks/punk1.png";
+import punk2 from "../../assets/punks/punk2.png";
+import punk3 from "../../assets/punks/punk3.png";
+import punk4 from "../../assets/punks/punk4.png";
+import punk5 from "../../assets/punks/punk5.png";
+import punk6 from "../../assets/punks/punk6.png";
+---
+
+<section>
+    <div class="">
+        <div class="punk-slider">
+            <div>
+                <img src={punk1} />
+                <img src={punk2} />
+                <img src={punk3} />
+                <img src={punk4} />
+                <img src={punk5} />
+                <img src={punk6} />
+            </div>
+            <div>
+                <img src={punk1} />
+                <img src={punk2} />
+                <img src={punk3} />
+                <img src={punk4} />
+                <img src={punk5} />
+                <img src={punk6} />
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        background: var(--bg);
+        pointer-events: none;
+        user-select: none;
+    }
+    .punk-slider {
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+    }
+    .punk-slider div {
+        display: flex;
+        animation: marquee 15s linear infinite;
+    }
+    img {
+        display: block;
+        width: 187px;
+        height: 187px;
+        margin: 0 1vw;
+        padding: 0 10px;
+    }
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+</style>
