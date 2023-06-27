@@ -37,12 +37,14 @@ import FeatureCard from "../ui/FeatureCard.astro";
     .list {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
+        justify-content: space-between;
     }
     @media (min-width: 696px) {
         .list {
             flex-direction: row;
             gap: 15px;
+            justify-content: space-evenly;
         }
     }
 </style>
