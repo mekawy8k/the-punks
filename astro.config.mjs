@@ -1,7 +1,6 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 export default defineConfig({
-  // ...
-  integrations: [
-    //react()
-  ],
+  site: "https://mekawy8k.github.io",
+  base: "/the-punks",
+  integrations: [],
 });
