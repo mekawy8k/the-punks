@@ -9,8 +9,8 @@ import twitter from '../../assets/icons/twitter.svg'
         <nav id="nav" class="">
             <div class="nav-body">
                 <ul>
-                    <li><a href="#About" class="link">About</a></li>
-                    <li><a href="#Collection" class="link">Collection</a></li>
+                    <li><a href="#about" class="link">About</a></li>
+                    <li><a href="#collections" class="link">Collection</a></li>
                     <li><a href="#FAQs" class="link">FAQs</a></li>
                     <li>
                         <button class="action-btn link">Connect wallet</button>
@@ -63,6 +63,7 @@ import twitter from '../../assets/icons/twitter.svg'
         transition: all 0.3s ease-in-out;
         left: -100vw;
         height: calc(100vh - 63px);
+        height: fit-content;
     }
     header .wrapper nav.active .nav-body {
         display: block;
@@ -72,6 +73,7 @@ import twitter from '../../assets/icons/twitter.svg'
         left: 0px;
         background: var(--bg);
         padding: 30px 0;
+        height: calc(100vh);
     }
     header .wrapper nav .nav-body ul {
         display: flex;

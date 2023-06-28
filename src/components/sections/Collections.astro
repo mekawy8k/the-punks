@@ -1,0 +1,92 @@
+---
+import Slider from "../ui/Slider.astro";
+import PunkCard from '../ui/PunkCard.astro'
+import img1 from '../../assets/largest-sales-punks/Image (1).png'
+import img2 from '../../assets/largest-sales-punks/Image (2).png'
+import img3 from '../../assets/largest-sales-punks/Image (3).png'
+import img4 from '../../assets/recent-transactions-punks/Image (4).png'
+import img5 from '../../assets/recent-transactions-punks/Image (5).png'
+import img6 from '../../assets/recent-transactions-punks/Image (6).png'
+---
+
+<section id="collections">
+    <div class="wrapper">
+        <div class="header">
+            <h2>Largest Sales</h2>
+            <button>View all</button>
+        </div>
+        <Slider>
+            <PunkCard img={img3} title="#21342" desc="834$"/>
+            <PunkCard img={img2} title="#3242" desc="954$"/>
+            <PunkCard img={img1} title="#23423" desc="987$"/>
+            <PunkCard img={img3} title="#578" desc="834$"/>
+            <PunkCard img={img2} title="#4967" desc="954$"/>
+            <PunkCard img={img1} title="#3544" desc="987$"/>
+        </Slider>
+    </div>
+    <div class="wrapper">
+        <div class="header">
+            <h2>ٌRecent Transactions</h2>
+            <button>View all</button>
+        </div>
+        <Slider>
+            <PunkCard img={img6} title="#21342" desc="New bid of 51.20Ξ ($210,265)"/>
+            <PunkCard img={img5} title="#3242" desc="New bid of 51.20Ξ ($210,265)"/>
+            <PunkCard img={img4} title="#23423" desc="New bid of 51.20Ξ ($210,265)"/>
+            <PunkCard img={img6} title="#578" desc="New bid of 51.20Ξ ($210,265)"/>
+            <PunkCard img={img5} title="#4967" desc="New bid of 51.20Ξ ($210,265)"/>
+            <PunkCard img={img4} title="#3544" desc="New bid of 51.20Ξ ($210,265)"/>
+        </Slider>
+    </div>
+</section>
+<style>
+    section .wrapper {
+        padding: 35px 0px;
+        display: flex;
+        flex-direction: column;
+        font-family: var(--font);
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+        margin-bottom: 40px;
+    }
+    .header h2 {
+        color: var(--background, #101111);
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 42px;
+        letter-spacing: -1px;
+    }
+    .header button {
+        content: "View all";
+        color: var(--background, #101111);
+        text-align: center;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 26px;
+        padding: 12px 34px 13px 32px;
+        border-radius: 100px;
+        border: 1px solid var(--gray);
+        background: transparent;
+    }
+    @media (min-width: 696px) {
+        .header {
+            flex-direction: row;
+        }
+        .header h2 {
+            font-size: 52px;
+            font-weight: 500;
+            line-height: 67px;
+            letter-spacing: -2px;
+        }
+        .header button {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 31px;
+        }
+    }
+</style>

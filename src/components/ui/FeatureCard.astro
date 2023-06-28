@@ -28,14 +28,21 @@ const { link } = Astro.props;
     }
     .card .bg {
         width: 0%;
-        height: 100%;
+        aspect-ratio: 1/1;
         background: var(--main);
         position: absolute;
         z-index: 9;
-        transition: width 0.2s ease-in-out;
+        transition: width 0.2s ease-in;
+        translate: -50% -50%;
+        top: 50%;
+        left: 50%;
+        border-radius: 100%;
     }
     .card:hover .bg {
-        width: 100%;
+        width: 120%;
+    }
+    .card:hover{
+        scale: 1.1;
     }
     .card-body {
         padding: 28px 40px 0px 20px;

@@ -1,16 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Container from '../components/ui/Container.astro'
+import PageWrapper from '../components/ui/PageWrapper.astro'
 import Header from '../components/sections/Header.astro'
 import Hero from "../components/sections/Hero.astro";
 import FeaturedIn from "../components/sections/FeaturedIn.astro";
 import About from "../components/sections/About.astro";
+import Collections from "../components/sections/Collections.astro";
 ---
 <Layout title="The Punks">
-    <Header/>
-    <Container>
+    
+    <PageWrapper>
+        <Header/>
         <Hero/>
         <FeaturedIn/>
         <About/>
-    </Container>
+        <Collections/>
+    </PageWrapper>
 </Layout>
