@@ -1,0 +1,41 @@
+---
+---
+
+<footer>
+    <div class="wrapper">
+        <a>© 2021 The-Punks. All right reserved.</a>
+        <a>Privacy Policy</a>
+        <a>Terms of Service</a>
+        <a>Cookies Settings</a>
+    </div>
+</footer>
+
+<style>
+    footer{
+        background-color: var(--bg);
+        border-top: 1px solid var(--gray);
+        padding: 30px 0px;
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+    }
+    .wrapper a {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 15px;
+        font-family: var(--font);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+    @media (min-width: 696px) {
+        
+        .wrapper {
+            flex-direction: row;
+            justify-content: center;
+            gap:28px;
+        }
+    }
+</style>

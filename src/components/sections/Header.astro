@@ -34,17 +34,19 @@ import twitter from '../../assets/icons/twitter.svg'
 
 <style>
     header {
-        position: sticky;
-        top: 0px;
-        background-color: var(--bg);
+        position: static;
+        height: 64px;
         z-index: 100;
+        background-color: var(--bg);
+
     }
     header .wrapper {
+        background-color: var(--bg);
+        position: sticky;
+        top: 0px;
         font-family: var(--font);
         max-width: 1512px;
-        margin: 0 auto;
         display: flex;
-        height: 63px;
         justify-content: space-between;
         align-items: center;
         padding: 0px 20px;
@@ -94,6 +96,7 @@ import twitter from '../../assets/icons/twitter.svg'
         font-weight: 500;
         line-height: 28px;
         margin: 10px auto;
+        scroll-behavior: smooth;
     }
     header .wrapper nav .nav-body ul li .social-group .social {
         width: 24px;
@@ -145,6 +148,9 @@ import twitter from '../../assets/icons/twitter.svg'
     }
 
     @media (min-width: 696px) {
+        header{
+            height: 84px;
+        }
         header .wrapper {
             height: 84px;
             margin: 0px auto;
