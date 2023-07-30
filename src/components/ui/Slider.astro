@@ -16,7 +16,7 @@
     .list{
         display: flex;
         gap: 20px;
-        overflow-x: clip;
+        overflow-x: hidden;
         scroll-behavior: smooth;
     }
     .control{
@@ -45,6 +45,15 @@
     }
 </style>
 
-<script>
-    
-</script>
+<script >
+    const sliderList = document.querySelectorAll('#slider-list'),
+          next = document.querySelectorAll('.next'),
+          prev = document.querySelectorAll('.prev');
+
+    function scroll(x){
+        sliderList.forEach(el=>el.scrollBy(x,0))
+        
+    }
+    next.forEach(el=>el.onclick = ()=> scroll(330))
+    prev.forEach(el=>el.onclick = ()=> scroll(-330))
+    </script>

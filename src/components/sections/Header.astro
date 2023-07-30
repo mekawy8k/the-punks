@@ -7,7 +7,7 @@ import twitter from '../../assets/icons/twitter.svg'
     <div class="wrapper">
         <div class="logo"></div>
         <nav id="nav" class="">
-            <div class="nav-body">
+            <div class="nav-body" id="nav-body">
                 <ul>
                     <li><a href="#about" class="link">About</a></li>
                     <li><a href="#collections" class="link">Collection</a></li>
@@ -61,21 +61,18 @@ import twitter from '../../assets/icons/twitter.svg'
     header .wrapper nav .nav-body {
         position: absolute;
         top: 63px;
+        z-index: 1000;
         display: block;
         transition: all 0.3s ease-in-out;
-        left: -100vw;
+        left: -105vw;
         height: calc(100vh - 63px);
-        height: fit-content;
     }
     header .wrapper nav.active .nav-body {
         display: block;
-        position: absolute;
-        top: 63px;
-        width: 100vw;
-        left: 0px;
+        width: 105vw;
+        left: -8%;
         background: var(--bg);
         padding: 30px 0;
-        height: calc(100vh);
     }
     header .wrapper nav .nav-body ul {
         display: flex;
@@ -180,10 +177,17 @@ import twitter from '../../assets/icons/twitter.svg'
 
 <script>
     const nav: HTMLElement = document.getElementById("nav");
+    const navBody: HTMLElement = document.getElementById("nav-body");
+    const links = document.querySelectorAll("#nav-body ul li");
     const toggle: HTMLElement = document.getElementById("nav-toggle");
+    let toggled: boolean = false
     function toggleNav(e: any): void {
         e.preventDefault();
         nav.classList.toggle("active");
+        toggled=!toggled
     }
     toggle.onclick = toggleNav;
+    links.forEach(element => {
+        element.onclick = (e)=> nav.classList.remove('active');
+    })
 </script>
